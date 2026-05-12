@@ -7,7 +7,6 @@ from PyQt5.QtOpenGL import QGLWidget
 from OpenGL.GL import *
 from OpenGL.GLU import *
 
-# --- СУЧАСНИЙ СТИЛЬ (QSS) ---
 style_sheet = """
 QMainWindow { background-color: #121212; }
 QLabel { color: #E0E0E0; font-family: 'Segoe UI'; font-size: 13px; font-weight: bold; }
@@ -22,7 +21,6 @@ class Visualizer3D(QGLWidget):
         super(Visualizer3D, self).__init__(parent)
         self.setFocusPolicy(Qt.StrongFocus)
         
-        # Камера
         self.rotX = 25.0
         self.rotY = 45.0
         self.zoom = -20.0
