@@ -41,10 +41,10 @@ class Visualizer3D(QGLWidget):
     def update_animation(self):
         """Оновлення часу для створення ефекту вібрації"""
         self.time += 0.05 * self.anim_speed
-        self.update() # Перемальовуємо екран
+        self.update() 
 
     def initializeGL(self):
-        glEnable(GL_DEPTH_TEST) # Включаємо тест глибини (щоб передні стінки перекривали задні)
+        glEnable(GL_DEPTH_TEST) 
         glClearColor(0.05, 0.05, 0.05, 1.0) # Темно-сірий фон
 
     def resizeGL(self, w, h):
