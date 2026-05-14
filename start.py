@@ -36,7 +36,9 @@ class Visualizer3D(QGLWidget):
         self.time = 0.0
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_animation)
-        self.timer.start(16) # ~60 FPS
+        self.timer.start(16) 
+
+
 
     def update_animation(self):
         """Оновлення часу для створення ефекту вібрації"""
