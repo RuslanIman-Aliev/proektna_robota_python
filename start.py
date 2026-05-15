@@ -32,7 +32,6 @@ class Visualizer3D(QGLWidget):
         self.A1, self.A2, self.A3 = 0.1, 0.05, 0.5
         self.anim_speed = 1.0
         
-        # Час для анімації
         self.time = 0.0
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_animation)
@@ -47,7 +46,8 @@ class Visualizer3D(QGLWidget):
 
     def initializeGL(self):
         glEnable(GL_DEPTH_TEST) 
-        glClearColor(0.05, 0.05, 0.05, 1.0) # Темно-сірий фон
+        glClearColor(0.05, 0.05, 0.05, 1.0) 
+
 
     def resizeGL(self, w, h):
         glViewport(0, 0, w, h)
