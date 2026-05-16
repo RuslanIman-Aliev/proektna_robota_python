@@ -83,7 +83,6 @@ class Visualizer3D(QGLWidget):
         intensity = abs(w) / (self.A3 + 0.001) 
         intensity = max(0.0, min(1.0, intensity))
         
-        # Градієнт: Синій (мінімум) -> Зелений -> Червоний (максимум)
         r = intensity
         g = 1.0 - abs(intensity - 0.5) * 2.0
         b = 1.0 - intensity
