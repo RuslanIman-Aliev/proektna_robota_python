@@ -77,7 +77,6 @@ class Visualizer3D(QGLWidget):
         Y = (self.R + w) * math.cos(theta) - u2 * math.sin(theta)
         Z = (self.R + w) * math.sin(theta) + u2 * math.cos(theta)
         
-        # --- КОЛЬОРОВА КАРТА (Heatmap) ---
         # Обчислюємо відносне зміщення (від 0 до 1)
         # Додаємо 0.001, щоб уникнути ділення на нуль
         intensity = abs(w) / (self.A3 + 0.001) 
